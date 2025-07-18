@@ -59,27 +59,19 @@ Dates: Issue Date, Last Payment, Next Payment
 🧮 SQL KPIs & Queries Used:
 Total Loan Applications
 
-sql
-Copy
-Edit
+
 SELECT COUNT(DISTINCT id) FROM finance_loan;
 Monthly Loan Trends
 
-sql
-Copy
-Edit
+
 SELECT MONTH(issue_date), COUNT(*) FROM finance_loan GROUP BY MONTH(issue_date);
 Total Funded Amount, Avg. Interest Rate & DTI
 
-sql
-Copy
-Edit
+
 SELECT SUM(loan_amount), AVG(int_rate), AVG(dti) FROM finance_loan;
 Loan Status Summary
 
-sql
-Copy
-Edit
+
 SELECT loan_status, COUNT(*), AVG(int_rate), SUM(loan_amount) FROM finance_loan GROUP BY loan_status;
 Good vs Bad Loans Classification
 
