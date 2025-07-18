@@ -40,6 +40,7 @@ Improves operational efficiency through automated, visual reporting
 Fosters a culture of analytics in the banking domain
 
 🗂️ Dimensions & Key Features Analyzed:
+
 Loan Status
 
 Borrower Location (State)
@@ -56,17 +57,15 @@ Interest Rate and Loan Term
 
 Dates: Issue Date, Last Payment, Next Payment
 
-🧮 SQL KPIs & Queries Used:
-Total Loan Applications
+🧮 SQL KPIs & Queries Used(some example):
 
+Total Loan Applications
 
 SELECT COUNT(DISTINCT id) FROM finance_loan;
 Monthly Loan Trends
 
-
 SELECT MONTH(issue_date), COUNT(*) FROM finance_loan GROUP BY MONTH(issue_date);
 Total Funded Amount, Avg. Interest Rate & DTI
-
 
 SELECT SUM(loan_amount), AVG(int_rate), AVG(dti) FROM finance_loan;
 Loan Status Summary
@@ -88,6 +87,7 @@ Aggregated interest rates, DTI, payment totals
 All SQL queries used are provided in the SQL_QUERY_DOC.docx file.
 
 🧾 Domain Knowledge Incorporated:
+
 Explained how banks collect and use loan data
 
 Discussed the entire loan approval process (Application → Disbursement → Monitoring)
@@ -103,6 +103,7 @@ Portfolio optimization
 Customer insights
 
 ✅ Tools & Stack:
+
 MySQL Workbench (Data extraction and transformation)
 
 Power BI (Visualization and report building)
